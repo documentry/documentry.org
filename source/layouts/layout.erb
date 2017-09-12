@@ -5,11 +5,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Documentry</title>
-    <link href="/stylesheets/application.css" rel="stylesheet" />
-    <script src="/javascripts/application.js"></script>
+    <title><%= current_page.data.title || "Documentry" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body>
-    
+    <%= yield %>
   </body>
 </html>
