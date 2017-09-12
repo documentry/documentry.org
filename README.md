@@ -1,6 +1,6 @@
 # documentry.org
 
-Official site of Documentry foundation.
+Official site of Documentry Foundation.
 
 ## About
 
@@ -9,7 +9,7 @@ with a decentralized structure that combine flexible routing, spartan hardware
 requirements, strong security, simple developer API and rich functionality.
 
 **Documentry Foundation** is a team of developers and supporters of Documentry
-technologies stack.
+technologies stack organized as decentralized autonomous organization.
 
 ## Big thanks to:
 
