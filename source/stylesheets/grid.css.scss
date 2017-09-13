@@ -30,6 +30,36 @@ $screen-xl-min: 50rem;
   display: block;
 }
 
+.hmargin-half {
+  padding-left: $pad/2;
+  padding-right: $pad/2;
+}
+
+.hmargin {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+.hmargin-double {
+  padding-left: $pad*2;
+  padding-right: $pad*2;
+}
+
+.vmargin-half {
+  padding-bottom: $pad/2;
+  padding-top: $pad/2;
+}
+
+.vmargin {
+  padding-bottom: $pad;
+  padding-top: $pad;
+}
+
+.vmargin-double {
+  padding-bottom: $pad*2;
+  padding-top: $pad*2;
+}
+
 .hpad-half {
   padding-left: $pad/2;
   padding-right: $pad/2;

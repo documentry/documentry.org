@@ -1,0 +1,25 @@
+---
+title: Donate funds
+javascripts:
+  - clipboard
+stylesheets:
+  - index-theme
+---
+
+.viewport
+  .row
+    .col.xs12.hpad-double.vpad-double.hcenter
+      %h1 Help us to work on the idea
+  .row
+    .col.xs12.hpad-double
+      %h3 Available donation ports
+  .row.hpad
+    - data.donation.ports.each do |currency, address|
+      .col.xs12.s12.m6.l3.xl2.hmargin.vmargin
+        .box.hcenter
+          %h3
+            = currency.split('_').map(&:capitalize).join('')
+          %img.donation-qr{src: "/images/donation-ports/#{currency}.png"}
+          Copy to clipboard
+          %button#ss{onclick: "clipboard.copy('#{address}')"}
+            %i.fa.fa-clipboard{"aria-hidden" => "true"}

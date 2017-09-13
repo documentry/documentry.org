@@ -11,8 +11,11 @@ body{
   color: $color;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 13pt;
-  font-weight: 200;
   line-height: 1.65;
+}
+
+strong{
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .box{
@@ -26,4 +29,18 @@ body{
 
 .hcenter{
   text-align: center;
+}
+
+.donation-qr{
+  width: 100%;
+}
+
+button{
+  background: none;
+  border: 0;
+  color: $color;
+}
+
+button i.fa{
+  cursor: pointer;
 }
