@@ -3,6 +3,12 @@
 $color: rgba(255, 255, 255, 0.8);
 $bgcolor: #000;
 
+a{
+  color: $color;
+  font-style: italic;
+  text-decoration: none;
+}
+
 body{
   background-color: $bgcolor;
   background-image: url("/images/bg.jpg");
@@ -12,6 +18,16 @@ body{
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 13pt;
   line-height: 1.65;
+}
+
+button{
+  background: none;
+  border: 0;
+  color: $color;
+}
+
+button i.fa{
+  cursor: pointer;
 }
 
 strong{
@@ -33,14 +49,4 @@ strong{
 
 .donation-qr{
   width: 100%;
-}
-
-button{
-  background: none;
-  border: 0;
-  color: $color;
-}
-
-button i.fa{
-  cursor: pointer;
 }

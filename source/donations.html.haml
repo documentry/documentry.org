@@ -7,16 +7,16 @@ stylesheets:
 ---
 
 .viewport
-  .row
-    .col.xs12.hpad-double.vpad-double.hcenter
+  .row.hpad-double.vpad-double.hcenter
+    .col.xs12
       %h1 Help us to work on the idea
-  .row
+  .row.hpad-double.hcenter
     .col.xs12.hpad-double
       %h3 Available donation ports
-  .row.hpad
+  .row.hpad.hcenter
     - data.donation.ports.each do |currency, address|
       .col.xs12.s12.m6.l3.xl2.hmargin.vmargin
-        .box.hcenter
+        .box
           %h3
             = currency.split('_').map(&:capitalize).join('')
           %img.donation-qr{src: "/images/donation-ports/#{currency}.png"}
