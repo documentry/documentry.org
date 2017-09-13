@@ -3,11 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= current_page.data.title || "Documentry" %></title>
     <%= stylesheet_link_tag "application" %>
+    <% if current_page.data.stylesheets.is_a?(Array) %>
+      <% current_page.data.stylesheets.each do |filename| %>
+        <%= stylesheet_link_tag filename %>
+      <% end %>
+    <% end %>
     <%= javascript_include_tag "application" %>
+    <% if current_page.data.javascripts.is_a?(Array) %>
+      <% current_page.data.javascripts.each do |filename| %>
+        <%= javascript_include_tag filename %>
+      <% end %>
+    <% end %>
   </head>
   <body>
     <%= yield %>

@@ -1,46 +1,27 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-# Layouts
-# https://middlemanapp.com/basics/layouts/
-
-# Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  #activate :asset_hash
+  #activate :asset_host, :host => '//YOURDOMAIN.cloudfront.net'
+end
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+configure :development do
+  set :css_dir, 'stylesheets'
+  set :js_dir, 'javascripts'
+  set :images_dir, 'images'
+  set :fonts_dir, 'fonts'
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+  set :livereload_css_target, 'stylesheets/application'
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+  activate :livereload
+end
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
-
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+activate :i18n
